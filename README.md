@@ -1,3 +1,9 @@
+# Micrograd Implementation
+
+This project implements the core functionality of Micrograd, a lightweight library for building and training neural networks. The implementation provides a step-by-step recreation of essential components like `Value`, `Neuron`, `Layer`, and `MLP`, showcasing how they work together to enable a simple yet powerful machine learning framework.
+
+---
+
 ## Table of Contents
 
 - [Overview](#overview)
@@ -16,13 +22,14 @@
 
 ## Overview
 
-Micrograd is a library designed to help users intuitively understand the core principles behind automatic differentiation and neural network training. This implementation recreates its functionality by defining basic building blocks like `Value` objects, neurons, layers, and multi-layer perceptrons (MLPs), enabling gradient computation and backpropagation.
+Micrograd is a library designed to help users intuitively understand the core principles behind automatic differentiation and neural network training. This implementation provides fundamental building blocks like `Value` objects, neurons, layers, and multi-layer perceptrons (MLPs), enabling gradient computation and backpropagation. The goal is to demystify the inner workings of neural networks in a clean, modular way.
 
 ---
 
 ## Components
 
 ### Value
+
 The `Value` class is the foundational component, representing a scalar value in a computational graph. Each `Value` object tracks its history of operations to enable gradient computation.
 
 **Key Features:**
@@ -46,9 +53,10 @@ print(a.grad)  # Gradient of d w.r.t a
 ---
 
 ### Neuron
+
 The `Neuron` class represents a single unit in a neural network. It:
 - Computes a weighted sum of inputs.
-- Applies a non-linear activation function, like ReLU.
+- Applies a non-linear activation function, such as ReLU.
 
 **Example:**
 ```python
@@ -63,6 +71,7 @@ output.backward()  # Backpropagation
 ---
 
 ### Layer
+
 The `Layer` class comprises multiple neurons working together. It:
 - Organizes a group of neurons.
 - Processes input data collectively.
@@ -79,6 +88,7 @@ outputs = layer(inputs)  # Forward pass
 ---
 
 ### MLP
+
 The `MLP` (Multi-Layer Perceptron) class stacks multiple layers to create a full neural network. It:
 - Accepts input data and propagates it through all layers.
 - Outputs predictions based on learned weights and biases.
@@ -138,6 +148,8 @@ Contributions are welcome! Feel free to open issues or submit pull requests for 
 ## License
 
 This project is licensed under the MIT License. See the LICENSE file for details.
+
+---
 
 ## Acknowledgments
 
