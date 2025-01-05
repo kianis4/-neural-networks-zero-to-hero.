@@ -1,3 +1,50 @@
+
+
+## Summary of What We Have Learned
+
+### What Are Neural Nets?
+
+Neural networks are mathematical expressions that:
+
+1. **Take input as data**:
+   - They accept data inputs and also take the weights and parameters of the neuron.
+
+2. **Perform a forward pass**:
+   - This involves calculating the neuron’s mathematical expression to predict outputs.
+   - A loss function then measures the accuracy of the predictions. Generally, the loss will be low when predictions closely match the targets, indicating that the network is performing well.
+
+3. **Optimize using the loss function**:
+   - The goal is to manipulate the loss function so that when the loss is low, the network solves the problem effectively.
+
+4. **Backpropagate the loss**:
+   - Through backpropagation, the gradient of the loss is calculated, which informs how to tune all the parameters to decrease the loss locally.
+   - This process is iterated multiple times using gradient descent.
+
+5. **Minimize the loss**:
+   - By following the gradient, the loss is minimized, ensuring that the network performs the desired task correctly.
+
+### Key Insights
+
+- Neural networks can be seen as a "blob" of neural connections that can perform arbitrary tasks, which is the source of their power.
+- Even a tiny network with 41 parameters can solve problems, but significantly more complex neural networks with billions (or even trillions) of parameters are now common.
+
+### Complex Neural Nets and Emerging Properties
+
+- **Example: GPT**
+  - In the case of GPT, the task involves predicting the next word in a sequence based on massive amounts of internet text data. This learning problem uses:
+    - A neural network with hundreds of billions of parameters.
+    - Cross-entropy loss instead of mean squared error for predicting the next token.
+  - Despite its complexity, the underlying principles remain identical:
+    - Gradient evaluation is the same.
+    - Gradient descent operates similarly.
+
+- **Remarkable Emerging Properties**:
+  - Training on large datasets often reveals fascinating and unexpected behaviors in neural networks.
+
+### Conclusion
+
+Neural network setup and training, regardless of scale, fundamentally operate on the same principles. Now, there is an intuitive understanding of how these processes work under the hood, making it easier to grasp the capabilities of neural networks for solving extremely complex problems.
+
 # Micrograd Implementation
 
 This project implements the core functionality of Micrograd, a lightweight library for building and training neural networks. The implementation provides a step-by-step recreation of essential components like `Value`, `Neuron`, `Layer`, and `MLP`, showcasing how they work together to enable a simple yet powerful machine learning framework.
